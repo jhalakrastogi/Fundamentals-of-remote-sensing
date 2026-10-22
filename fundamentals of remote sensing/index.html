@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhalak Rastogi | Fundamentals of Remote Sensing Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Link Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <div class="brand-box">
+                <span class="student-name">Jhalak Rastogi</span>
+                <span class="subject-tag">M.Sc. Geoinformatics • Semester I</span>
+            </div>
+            <nav aria-label="Subject Navigation">
+                <ul class="nav-links">
+                    <li><a href="#overview" class="nav-link active" data-tab="overview">Overview & Principles</a></li>
+                    <li><a href="#sensors" class="nav-link" data-tab="sensors">Sensor Mechanics</a></li>
+                    <li><a href="#collection" class="nav-link" data-tab="collection">Data Collection</a></li>
+                    <li><a href="#reflections" class="nav-link" data-tab="reflections">Subject Reflections</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Banner -->
+        <section class="hero-card">
+            <span class="badge">Bharati Vidyapeeth (BVIEER), Pune • Academic Year 2026–27</span>
+            <h1>Fundamentals of Remote Sensing</h1>
+            <p>A comprehensive academic repository documenting electromagnetic radiation principles, sensor detector physics, multispectral analysis, aerial data acquisition, and satellite image preprocessing.</p>
+        </section>
+
+        <!-- Interactive Tab Content Area -->
+        <div class="tab-content-container">
+
+            <!-- Tab 1: Overview & EMR Principles -->
+            <div id="overview" class="tab-pane active">
+                <div class="section-header">
+                    <h2>Electromagnetic Radiation & Physics Fundamentals</h2>
+                    <p>Core theoretical pillars governing energy-matter interactions and remote data capture.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>The Electromagnetic Spectrum (EMS)</h3>
+                        <p>Remote sensing relies on measuring electromagnetic energy radiated, reflected, or absorbed by target features. Our studies cover wavelengths ranging from visible light (0.4–0.7 µm) to near-infrared (NIR), shortwave infrared (SWIR), thermal infrared (TIR), and microwave regions (cm–m wavelength scale).</p>
+                    </div>
+                    <div class="card">
+                        <h3>Atmospheric Interactions & Windows</h3>
+                        <p>Solar radiation traveling through Earth's atmosphere undergoes scattering (Rayleigh, Mie, and Non-selective) and absorption by gases (H₂O, CO₂, O₃). Remote sensing instruments operate within specific <em>atmospheric windows</em>—spectral bands where the atmosphere remains transparent to incoming and outgoing EMR.</p>
+                    </div>
+                </div>
+
+                <div class="grid-2" style="margin-top: 20px;">
+                    <div class="card">
+                        <h3>Spectral Reflectance Curves</h3>
+                        <p>Different land surface covers exhibit distinct spectral signatures across wavelength bands. Healthy vegetation displays strong chlorophyll absorption in the red band and high scattering in NIR due to spongy mesophyll cells. Water absorbs strongly in NIR, while soil reflectance increases steadily across visible and SWIR bands depending on moisture content and organic matter.</p>
+                    </div>
+                    <div class="card">
+                        <h3>The Four Sensor Resolutions</h3>
+                        <ul class="clean-list">
+                            <li><strong>Spatial Resolution:</strong> Ground Sample Distance (GSD) or pixel size represented on the ground.</li>
+                            <li><strong>Spectral Resolution:</strong> Number and bandwidth fineness of electromagnetic channels captured.</li>
+                            <li><strong>Radiometric Resolution:</strong> Sensor sensitivity to subtle energy differences (bit depth, e.g., 8-bit to 16-bit).</li>
+                            <li><strong>Temporal Resolution:</strong> Revisit frequency of the satellite platform to the exact same geographical site.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Sensor Mechanics -->
+            <div id="sensors" class="tab-pane">
+                <div class="section-header">
+                    <h2>Sensor Optics, Detectors & Platform Mechanisms</h2>
+                    <p>Understanding how physical detectors, airborne instruments, and spaceborne systems measure and record signals.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Optical & Focal Plane Detectors</h3>
+                        <p>Modern remote sensing systems use Charge-Coupled Devices (CCD) and Complementary Metal-Oxide-Semiconductor (CMOS) sensors. Incoming light is focused through precision optical lenses onto arrays of photosensitive silicon elements that release electrons proportional to incident photon intensity.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Scanning & Platform Geometries</h3>
+                        <p>Sensors capture spatial swaths using optical geometries like whisk-broom and push-broom arrays. Beyond spaceborne satellites, data collection extends to airborne platforms and low-altitude Unmanned Aerial Vehicles (UAVs) equipped with compact RGB or multispectral payloads for ultra-high-resolution local mapping.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Multispectral & Thermal Radiometry</h3>
+                        <p>By using optical bandpass filters, sensors split incident radiation into discrete spectral channels. Thermal sensors measure longwave infrared emission (8–14 µm) to calculate kinetic surface temperature via Planck's Blackbody radiation laws across diverse environmental targets.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Satellite Data Collection & Processing -->
+            <div id="collection" class="tab-pane">
+                <div class="section-header">
+                    <h2>Data Acquisition, Platforms & Preprocessing</h2>
+                    <p>Orbital dynamics, aerial survey planning, telemetry, and radiometric/geometric corrections.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>Platform Dynamics & Flight Planning</h3>
+                        <p>Earth observation satellites generally occupy Sun-Synchronous Near-Polar Orbits (altitude 600–800 km) for consistent illumination. For high-detail local surveys, data collection involves UAV flight planning with precise forward and side overlap parameters, paired with Ground Control Points (GCPs) for sub-centimeter photogrammetric accuracy.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Data Quantization & Telemetry</h3>
+                        <p>Detectors convert analog energy signals into discrete Digital Numbers (DN) through Analog-to-Digital Converters (ADC). Quantization bit depth defines radiometric sensitivity, converting raw binary files transmitted via radio waves into usable digital image matrices.</p>
+                    </div>
+                </div>
+
+                <div class="grid-2" style="margin-top: 20px;">
+                    <div class="card">
+                        <h3>Radiometric & Atmospheric Correction</h3>
+                        <p>Raw DN values must be calibrated to Top-Of-Atmosphere (TOA) radiance and subsequently converted to Surface Reflectance. Atmospheric corrections (e.g., Dark Object Subtraction or radiative transfer models) remove scattering and absorption artifacts introduced by atmospheric haze.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Geometric Correction & Orthorectification</h3>
+                        <p>Satellite and aerial images contain geometric distortions caused by terrain relief displacement, platform tilt, and Earth curvature. Orthorectification uses DEMs and GCPs to project imagery into planimetric map coordinate systems (e.g., WGS 84 / UTM).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4: Subject Reflections -->
+            <div id="reflections" class="tab-pane">
+                <div class="section-header">
+                    <h2>Subject Reflections (Theory & Practical)</h2>
+                    <p>Academic learning reflections as mandated by university coursework guidelines.</p>
+                </div>
+                
+                <div class="card reflection-card" style="margin-bottom: 25px;">
+                    <span class="tag">Theory Reflection</span>
+                    <span class="meta-info">Subject: Fundamentals of Remote Sensing | Component: Theory | Word Count: 265 Words</span>
+                    <h3 style="margin-top: 10px;">Theoretical Understanding & Conceptual Evolution</h3>
+                    <p>
+                        Before undertaking Fundamentals of Remote Sensing, my perspective on satellite imagery was primarily visual, viewing satellite maps as static photographs. This subject radically transformed my understanding by grounding geospatial observation in electromagnetic radiation physics. Learning how solar energy interacts with atmospheric constituents through scattering mechanisms and atmospheric windows helped me realize that remote sensing measures precise physical quantities rather than mere pictures.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        The most meaningful theoretical concept for me was analyzing spectral reflectance signatures across the electromagnetic spectrum. Understanding why healthy vegetation reflects strongly in the near-infrared band due to internal mesophyll cellular structures, while absorbing strongly in the red band due to chlorophyll absorption, illuminated the biophysical foundation of index calculations like NDVI.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        My greatest theoretical challenge was grasping the trade-offs between the four sensor resolutions: spatial, spectral, radiometric, and temporal. I initially struggled to understand why a single satellite platform cannot simultaneously achieve sub-meter spatial resolution and global daily temporal coverage. Resolving this required analyzing orbital mechanics, detector signal-to-noise ratios, and data bandwidth constraints.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        This theoretical groundwork provides an essential foundation for my future postgraduate research in land-use change and environmental monitoring. Moving forward, I aim to explore advanced radiative transfer models and microwave remote sensing principles to better evaluate soil moisture and canopy structures.
+                    </p>
+                </div>
+
+                <div class="card reflection-card">
+                    <span class="tag">Practical Reflection</span>
+                    <span class="meta-info">Subject: Fundamentals of Remote Sensing | Component: Practical | Word Count: 262 Words</span>
+                    <h3 style="margin-top: 10px;">Practical Workflows, Data Acquisition & Technical Execution</h3>
+                    <p>
+                        The practical component of Fundamentals of Remote Sensing provided crucial hands-on experience in satellite image processing and aerial survey execution. Transitioning from theoretical principles to practical computer laboratory exercises allowed me to execute image calibration workflows, multispectral band combinations, and spatial feature classification.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        The highlight of our practical learning was participating in low-altitude UAV data acquisition workflows. Engaging in flight path configuration, setting up appropriate forward and side overlap parameters, and integrating Ground Control Points (GCPs) brought real-world depth to our photogrammetry lessons. Processing the collected aerial photographs through Structure-from-Motion software to generate dense point clouds, digital elevation models, and orthomosaics was exceptionally rewarding.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        A major practical difficulty I encountered was correcting radiometric atmospheric haze in multi-spectral satellite imagery and resolving seamline blending artifacts during orthomosaic stitching. I overcame these issues by comparing Top-Of-Atmosphere values against Surface Reflectance models and re-evaluating tie point matching thresholds in our processing software.
+                    </p>
+                    <p style="margin-top: 12px;">
+                        This practical training directly equips me for field validation, precision mapping, and environmental impact assessments. My immediate next objective is to integrate Python automation scripts with GIS toolsets to streamline raster band math calculations and batch processing workflows.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Jhalak Rastogi | Bharati Vidyapeeth Institute of Environment Education and Research (BVIEER)</p>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
